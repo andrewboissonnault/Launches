@@ -22,7 +22,7 @@ class LaunchIntegrationTests: XCTestCase {
     func testLaunchRequest() {
         let expectation = XCTestExpectation(description: "Fetch Launches")
         
-        let networkManager = NetworkManager()
+        let networkManager = NetworkManagerII()
         
         networkManager.fetchLaunches { (launchJson, error) in
             

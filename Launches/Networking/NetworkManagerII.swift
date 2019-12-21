@@ -34,7 +34,7 @@ protocol URLSessionDataTaskProtocol {
 
 extension URLSessionDataTask: URLSessionDataTaskProtocol { }
 
-class NetworkManager {
+class NetworkManagerII {
     private let urlBuilder : URLBuilder
     private let urlSession : URLSessionProtocol
     

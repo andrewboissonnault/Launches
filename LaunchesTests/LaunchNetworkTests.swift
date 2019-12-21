@@ -29,7 +29,7 @@ class LaunchNetworkTests: XCTestCase {
         dataTask.nextResponse = nil
         
         urlSession.nextDataTask = dataTask
-        let networkManager = NetworkManager.init(urlBuilder: urlBuilder, urlSession: urlSession)
+        let networkManager = NetworkManagerII.init(urlBuilder: urlBuilder, urlSession: urlSession)
         
         networkManager.fetchLaunches { (launchJson, error) in
             
@@ -66,7 +66,7 @@ class LaunchNetworkTests: XCTestCase {
         dataTask.nextResponse = nil
         
         urlSession.nextDataTask = dataTask
-        let networkManager = NetworkManager.init(urlBuilder: urlBuilder, urlSession: urlSession)
+        let networkManager = NetworkManagerII.init(urlBuilder: urlBuilder, urlSession: urlSession)
         
         networkManager.fetchLaunches { (launchJson, error) in
             
@@ -101,7 +101,7 @@ class LaunchNetworkTests: XCTestCase {
         dataTask.nextResponse = nil
         
         urlSession.nextDataTask = dataTask
-        let networkManager = NetworkManager.init(urlBuilder: urlBuilder, urlSession: urlSession)
+        let networkManager = NetworkManagerII.init(urlBuilder: urlBuilder, urlSession: urlSession)
         
         networkManager.fetchLaunches { (launchJson, error) in
             
