@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum LaunchNetworkingError : Error {
+@objc enum LaunchNetworkingError : Int, Error {
     case missingData
     case jsonSerialization
     case casting
@@ -17,7 +17,7 @@ enum LaunchNetworkingError : Error {
 
 typealias DataTaskResult = (Data?, URLResponse?, Error?) -> Void
 
-protocol URLSessionProtocol {
+@objc protocol URLSessionProtocol {
     func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol
 }
 
@@ -28,7 +28,7 @@ extension URLSession: URLSessionProtocol {
     }
 }
 
-protocol URLSessionDataTaskProtocol {
+@objc protocol URLSessionDataTaskProtocol {
     func resume()
 }
 

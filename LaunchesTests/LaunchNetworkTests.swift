@@ -23,13 +23,13 @@ class LaunchNetworkTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Fetch Launches")
         let urlBuilder = URLBuilder.init()
         let urlSession = MockURLSession()
-        var dataTask = MockURLSessionDataTask()
+        let dataTask = MockURLSessionDataTask()
         dataTask.nextData = dataFromJsonFile(filename: "testResponse")
         dataTask.nextError = nil
         dataTask.nextResponse = nil
         
         urlSession.nextDataTask = dataTask
-        let networkManager = NetworkManagerII.init(urlBuilder: urlBuilder, urlSession: urlSession)
+        let networkManager = NetworkManager.init(urlBuilder: urlBuilder, urlSession: urlSession)
         
         networkManager.fetchLaunches { (launchJson, error) in
             

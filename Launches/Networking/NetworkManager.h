@@ -8,11 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class URLBuilder;
+@protocol URLSessionProtocol;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NetworkManager : NSObject
 
--(void)fetchLaunches:(void(^)(NSDictionary *result, NSError* error))completion;
+-(id)initWithUrlBuilder:(URLBuilder*)urlBuilder urlSession:(id<URLSessionProtocol>)urlSession;
+
+-(void)fetchLaunches:(void(^)(NSDictionary<NSString*, id> *_Nullable result, NSError *_Nullable error))completion;
 
 @end
 

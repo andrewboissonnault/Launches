@@ -8,23 +8,22 @@
 
 import Foundation
 
-private let defaultBaseUrl = "https://launchlibrary.net/1.4/"
-
-class URLBuilder {
+public class URLBuilder : NSObject {
     private let baseUrl : URL
     
     init(baseUrl : URL) {
         self.baseUrl = baseUrl
     }
     
-    convenience init() {
+    public convenience override init() {
+        let defaultBaseUrl = "https://launchlibrary.net/1.4/"
         guard let url = URL.init(string: defaultBaseUrl) else {
             preconditionFailure("Failed to init URL = \(defaultBaseUrl)")
         }
         self.init(baseUrl: url)
     }
     
-    func launchUrl(count : Int) -> URL {
+    @objc public func launchUrl(count : Int) -> URL {
         let relativeUrl = "launch/next/\(count)"
         guard let url = URL.init(string: relativeUrl, relativeTo: baseUrl) else {
             preconditionFailure("Failed to init endpoint = \(relativeUrl)")
