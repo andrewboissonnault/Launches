@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import LaunchNetworking
+@testable import Launches
 
-class LaunchNetworkingIntegrationTests: XCTestCase {
+class LaunchIntegrationTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -21,17 +21,23 @@ class LaunchNetworkingIntegrationTests: XCTestCase {
 
     func testLaunchRequest() {
         let expectation = XCTestExpectation(description: "Fetch Launches")
-        
-        let networkManager = NetworkManager()
-        
-        networkManager.fetchLaunches { (data, error) in
+
+        let api = LaunchAPI()
+
+        api.fetchLaunches { (response, error) in
             
-            XCTAssertNotNil(data, "Data is nil")
-            XCTAssertNil(error, "Error is not nil")
+            XCTAssertEqual(response?.count, 20)
+            XCTAssertEqual(response?.offset, 0)
+            XCTAssertEqual(response?.launches.count, 20)
             
+            guard let first = response?.launches.first else {
+                XCTFail("Expected non empty launches list.")
+                return
+            }
+
             expectation.fulfill()
         }
-        
+
         wait(for: [expectation], timeout: 5.0)
     }
 

@@ -9,6 +9,8 @@
 #import "NetworkManager.h"
 #import <LaunchNetworking/LaunchNetworking-Swift.h>
 
+const NSUInteger NEXT_COUNT = 20;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NetworkManager()
@@ -35,8 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
     return self;
 }
 
--(void)fetchLaunches:(void(^)(NSDictionary<NSString*, id> *_Nullable result, NSError *_Nullable error))completion {
-    NSURL* url = [self.urlBuilder launchUrlWithCount:20];
+-(void)fetchLaunches:(void(^)(NSData *_Nullable data, NSError *_Nullable error))completion {
+    NSURL* url = [self.urlBuilder launchUrlWithCount:NEXT_COUNT];
     id<URLSessionDataTaskProtocol> task = [self.urlSession dataTaskWith:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if(error != nil) {
             completion(nil, error);
@@ -47,13 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
             completion(nil, error);
             return;
         }
-        NSError* serializationError;
-        id json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingFragmentsAllowed error:&serializationError];
-        if(serializationError != nil) {
-            completion(nil, serializationError);
-            return;
-        }
-        completion(json, nil);
+        completion(data, nil);
     }];
     [task resume];
 }

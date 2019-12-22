@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(id)initWithUrlBuilder:(URLBuilder*)urlBuilder urlSession:(id<URLSessionProtocol>)urlSession;
 
--(void)fetchLaunches:(void(^)(NSDictionary<NSString*, id> *_Nullable result, NSError *_Nullable error))completion;
+-(void)fetchLaunches:(void(^)(NSData *_Nullable data, NSError *_Nullable error))completion;
 
 @end
 

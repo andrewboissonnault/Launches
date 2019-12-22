@@ -30,37 +30,17 @@
       codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F214022723AB5382001BCB6B"
-               BuildableName = "LaunchesTests.xctest"
-               BlueprintName = "LaunchesTests"
-               ReferencedContainer = "container:Launches.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F214023223AB5382001BCB6B"
-               BuildableName = "LaunchesUITests.xctest"
-               BlueprintName = "LaunchesUITests"
-               ReferencedContainer = "container:Launches.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F2A2F83623AB55EB00D9FAA3"
+               BlueprintIdentifier = "F2503F4823AF4F1800091E5F"
                BuildableName = "LaunchIntegrationTests.xctest"
                BlueprintName = "LaunchIntegrationTests"
                ReferencedContainer = "container:Launches.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
-            skipped = "NO">
+            skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F2326FD523AF1EE500F67875"
@@ -70,12 +50,22 @@
             </BuildableReference>
          </TestableReference>
          <TestableReference
-            skipped = "NO">
+            skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F2326FF723AF2C1F00F67875"
                BuildableName = "LaunchNetworkingIntegrationTests.xctest"
                BlueprintName = "LaunchNetworkingIntegrationTests"
+               ReferencedContainer = "container:Launches.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F2503F3A23AF4ED800091E5F"
+               BuildableName = "LaunchTests.xctest"
+               BlueprintName = "LaunchTests"
                ReferencedContainer = "container:Launches.xcodeproj">
             </BuildableReference>
          </TestableReference>

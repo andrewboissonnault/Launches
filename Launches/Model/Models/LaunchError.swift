@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc enum LaunchNetworkingError : Int, Error {
+enum LaunchError : Error {
     case missingData
-    case networkingError
+    case decodingError
 }
