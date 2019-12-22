@@ -49,6 +49,38 @@ class LaunchTests: XCTestCase {
 
         wait(for: [expectation], timeout: 5.0)
     }
+    
+    func testFetchLaunchesWithError() {
+        let expectation = XCTestExpectation(description: "Fetch Launches With Error")
+        let manager = MockNetworkManager()
+        manager.nextData = nil
+        manager.nextError = LaunchNetworkingError.networkingError
+
+        let api = LaunchAPI.init(networkManager: manager)
+
+        api.fetchLaunches { (response, error) in
+
+            XCTAssertNil(response, "Json is not nil")
+            XCTAssertNotNil(error, "Error is nil")
+
+            guard let castedError = error as? LaunchNetworkingError else {
+                XCTFail("Error casting to LaunchNetworkingError.")
+                expectation.fulfill()
+                return
+            }
+
+            if case .networkingError = castedError {
+                expectation.fulfill()
+            }
+            else {
+                XCTFail("Error was not .networkingError")
+                expectation.fulfill()
+                return
+            }
+        }
+
+        wait(for: [expectation], timeout: 5.0)
+    }
 
     func testFetchLaunchesWithMissingData() {
         let expectation = XCTestExpectation(description: "Fetch Launches With Missing Data")
