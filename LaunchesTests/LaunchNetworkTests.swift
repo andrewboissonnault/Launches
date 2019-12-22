@@ -42,9 +42,9 @@ class LaunchNetworkTests: XCTestCase {
             let launches = launchJson?["launches"] as? [Any]
             
             XCTAssertNotNil(launchJson, "Count is nil")
-            XCTAssertNotNil(launchJson, "Offset is nil")
-            XCTAssertNotNil(launchJson, "Total is nil")
-            XCTAssertNotNil(launchJson, "Launches are nil")
+            XCTAssertNotNil(offset, "Offset is nil")
+            XCTAssertNotNil(total, "Total is nil")
+            XCTAssertNotNil(launches, "Launches are nil")
                 
             XCTAssertEqual(count,20)
             XCTAssertEqual(offset,0)
@@ -60,13 +60,13 @@ class LaunchNetworkTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Fetch Launches With Error")
         let urlBuilder = URLBuilder.init()
         let urlSession = MockURLSession()
-        var dataTask = MockURLSessionDataTask()
+        let dataTask = MockURLSessionDataTask()
         dataTask.nextData = nil
         dataTask.nextError = LaunchNetworkingError.networkingError
         dataTask.nextResponse = nil
         
         urlSession.nextDataTask = dataTask
-        let networkManager = NetworkManagerII.init(urlBuilder: urlBuilder, urlSession: urlSession)
+        let networkManager = NetworkManager.init(urlBuilder: urlBuilder, urlSession: urlSession)
         
         networkManager.fetchLaunches { (launchJson, error) in
             
@@ -95,13 +95,13 @@ class LaunchNetworkTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Fetch Launches With Missing Data")
         let urlBuilder = URLBuilder.init()
         let urlSession = MockURLSession()
-        var dataTask = MockURLSessionDataTask()
+        let dataTask = MockURLSessionDataTask()
         dataTask.nextData = nil
         dataTask.nextError = nil
         dataTask.nextResponse = nil
         
         urlSession.nextDataTask = dataTask
-        let networkManager = NetworkManagerII.init(urlBuilder: urlBuilder, urlSession: urlSession)
+        let networkManager = NetworkManager.init(urlBuilder: urlBuilder, urlSession: urlSession)
         
         networkManager.fetchLaunches { (launchJson, error) in
             
@@ -122,6 +122,42 @@ class LaunchNetworkTests: XCTestCase {
                 expectation.fulfill()
                 return
             }
+        }
+        wait(for: [expectation], timeout: 5.0)
+    }
+    
+    func testFetchLaunchesWithSerializationError() {
+        let expectation = XCTestExpectation(description: "Fetch Launches With Serialization Error")
+        let urlBuilder = URLBuilder.init()
+        let urlSession = MockURLSession()
+        let dataTask = MockURLSessionDataTask()
+        dataTask.nextData = dataFromJsonFile(filename: "testSerializationError")
+        dataTask.nextError = nil
+        dataTask.nextResponse = nil
+        
+        urlSession.nextDataTask = dataTask
+        let networkManager = NetworkManager.init(urlBuilder: urlBuilder, urlSession: urlSession)
+        
+        networkManager.fetchLaunches { (launchJson, error) in
+            
+            XCTAssertNil(launchJson, "Json is not nil")
+            XCTAssertNotNil(error, "Error is nil")
+            
+            
+            guard let castedError = error as? CocoaError else {
+                XCTFail("Error casting to CocoaError.")
+                expectation.fulfill()
+                return
+            }
+            
+            guard let debugDescription = castedError.userInfo[NSDebugDescriptionErrorKey] as? String else {
+                XCTFail("Error casting debug description to String.")
+                expectation.fulfill()
+                return
+            }
+            
+            XCTAssertEqual(debugDescription, "Unexpected end of file while parsing object.", "Expected parsing error")
+            expectation.fulfill()
         }
         wait(for: [expectation], timeout: 5.0)
     }
