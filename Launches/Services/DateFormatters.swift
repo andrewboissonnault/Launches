@@ -14,8 +14,10 @@ var isoFormatter: DateFormatter = {
     return formatter
 }()
 
-//var changedFormatter : DateFormatter = {
-//    let formatter = DateFormatter()
-//    formatter.dateFormat = "yyyy-MM-dd HHmmss"
-//    return formatter
-//}()
+var displayFormatter: DateFormatter = {
+    let template = "MMMM dd, yyyy HH:mm:ss"
+    let formatString = DateFormatter.dateFormat(fromTemplate: template, options: 0, locale: Locale.current)
+    let formatter = DateFormatter()
+    formatter.dateFormat = formatString
+    return formatter
+}()

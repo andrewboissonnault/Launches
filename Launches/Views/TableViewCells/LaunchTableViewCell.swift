@@ -10,7 +10,10 @@ import UIKit
 
 class LaunchTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var launchTime: UILabel!
+    @IBOutlet weak var missionCount: UILabel!
+    @IBOutlet weak var rocketshipIcon: UIImageView!
     
     var viewModel : LaunchCellViewModel! {
         didSet {
@@ -24,7 +27,9 @@ class LaunchTableViewCell: UITableViewCell {
     }
 
     private func updateViews() {
-        self.nameLabel.text = viewModel.name
+        self.name.text = viewModel.name
+        self.launchTime.text = viewModel.launch
+        self.missionCount.text = viewModel.mission
     }
 
 }

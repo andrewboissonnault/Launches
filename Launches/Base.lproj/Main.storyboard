@@ -15,24 +15,59 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LaunchCell" id="neL-FZ-708" customClass="LaunchTableViewCell" customModule="Launches" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LaunchCell" rowHeight="250" id="neL-FZ-708" customClass="LaunchTableViewCell" customModule="Launches" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="250"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="neL-FZ-708" id="syl-mc-W2b">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Qf-Oe-A97">
-                                            <rect key="frame" x="0.0" y="-1" width="414" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proton-M/Blok DM-03 | Elektro-L No.3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXc-Jk-3X4">
+                                            <rect key="frame" x="8" y="4" width="398" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="December 24, 2019 12:00:00 - December 24, 2019 12:40:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4h-sl-Gcj">
+                                            <rect key="frame" x="8" y="28.5" width="398" height="16"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Missions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJd-Aj-nLU">
+                                            <rect key="frame" x="12" y="226.5" width="390" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oDI-S0-jCf">
+                                            <rect key="frame" x="75" y="53.5" width="264" height="165"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="oDI-S0-jCf" secondAttribute="height" multiplier="1920:1200" id="B4Y-06-ifY"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="oDI-S0-jCf" secondAttribute="trailing" constant="75" id="DS0-3K-VgO"/>
+                                        <constraint firstItem="WJd-Aj-nLU" firstAttribute="top" secondItem="oDI-S0-jCf" secondAttribute="bottom" constant="8" id="IW1-Ms-ffD"/>
+                                        <constraint firstItem="oDI-S0-jCf" firstAttribute="leading" secondItem="syl-mc-W2b" secondAttribute="leading" constant="75" id="Muf-p7-6Um"/>
+                                        <constraint firstItem="oDI-S0-jCf" firstAttribute="top" secondItem="P4h-sl-Gcj" secondAttribute="bottom" constant="9" id="Pfb-oX-5Zc"/>
+                                        <constraint firstAttribute="trailing" secondItem="P4h-sl-Gcj" secondAttribute="trailing" constant="8" id="PiY-0u-TgP"/>
+                                        <constraint firstItem="WJd-Aj-nLU" firstAttribute="leading" secondItem="syl-mc-W2b" secondAttribute="leading" constant="12" id="Pp0-Qd-HuC"/>
+                                        <constraint firstItem="wXc-Jk-3X4" firstAttribute="top" secondItem="syl-mc-W2b" secondAttribute="top" constant="4" id="QNf-gF-ufe"/>
+                                        <constraint firstItem="wXc-Jk-3X4" firstAttribute="leading" secondItem="syl-mc-W2b" secondAttribute="leading" constant="8" id="XFL-wL-rQP"/>
+                                        <constraint firstItem="P4h-sl-Gcj" firstAttribute="top" secondItem="wXc-Jk-3X4" secondAttribute="bottom" constant="4" id="auU-wi-Gn9"/>
+                                        <constraint firstAttribute="trailing" secondItem="wXc-Jk-3X4" secondAttribute="trailing" constant="8" id="oz9-cZ-QyH"/>
+                                        <constraint firstAttribute="bottom" secondItem="WJd-Aj-nLU" secondAttribute="bottom" constant="4" id="rGI-R9-LRT"/>
+                                        <constraint firstAttribute="trailing" secondItem="WJd-Aj-nLU" secondAttribute="trailing" constant="12" id="sM2-sQ-O9W"/>
+                                        <constraint firstItem="P4h-sl-Gcj" firstAttribute="leading" secondItem="syl-mc-W2b" secondAttribute="leading" constant="8" id="wBM-MQ-qIk"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="nameLabel" destination="0Qf-Oe-A97" id="pAV-m4-OWz"/>
+                                    <outlet property="launchTime" destination="P4h-sl-Gcj" id="k0H-m7-dzA"/>
+                                    <outlet property="missionCount" destination="WJd-Aj-nLU" id="sSS-VD-WYN"/>
+                                    <outlet property="name" destination="wXc-Jk-3X4" id="BMj-CU-uLN"/>
+                                    <outlet property="rocketshipIcon" destination="oDI-S0-jCf" id="BEz-Zb-68H"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -44,7 +79,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GAo-kd-5GY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="231" y="115"/>
+            <point key="canvasLocation" x="230.43478260869566" y="114.50892857142857"/>
         </scene>
     </scenes>
 </document>
