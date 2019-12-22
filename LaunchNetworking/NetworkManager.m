@@ -7,7 +7,7 @@
 //
 
 #import "NetworkManager.h"
-#import "Launches-Swift.h"
+#import <LaunchNetworking/LaunchNetworking-Swift.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

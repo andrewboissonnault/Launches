@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Launches
+@testable import LaunchNetworking
 
 class LaunchIntegrationTests: XCTestCase {
 
@@ -33,10 +33,10 @@ class LaunchIntegrationTests: XCTestCase {
             let total = launchJson?["total"] as? Int
             let launches = launchJson?["launches"] as? [Any]
             
-            XCTAssertNotNil(launchJson, "Count is nil")
-            XCTAssertNotNil(launchJson, "Offset is nil")
-            XCTAssertNotNil(launchJson, "Total is nil")
-            XCTAssertNotNil(launchJson, "Launches are nil")
+            XCTAssertNotNil(count, "Count is nil")
+            XCTAssertNotNil(offset, "Offset is nil")
+            XCTAssertNotNil(total, "Total is nil")
+            XCTAssertNotNil(launches, "Launches are nil")
                 
             XCTAssertEqual(count,20)
             XCTAssertEqual(offset,0)

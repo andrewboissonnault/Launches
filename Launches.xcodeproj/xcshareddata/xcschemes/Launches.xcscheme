@@ -59,6 +59,26 @@
                ReferencedContainer = "container:Launches.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F2326FD523AF1EE500F67875"
+               BuildableName = "LaunchNetworkingTests.xctest"
+               BlueprintName = "LaunchNetworkingTests"
+               ReferencedContainer = "container:Launches.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F2326FF723AF2C1F00F67875"
+               BuildableName = "LaunchNetworkingIntegrationTests.xctest"
+               BlueprintName = "LaunchNetworkingIntegrationTests"
+               ReferencedContainer = "container:Launches.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

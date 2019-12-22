@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Launches
+@testable import LaunchNetworking
 
 class LaunchNetworkTests: XCTestCase {
 
