@@ -478,8 +478,8 @@
             filePath = "Launches/ViewControllers/LaunchListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -494,8 +494,72 @@
             filePath = "Launches/Views/TableViewCells/LaunchTableViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36">
+            startingLineNumber = "42"
+            endingLineNumber = "42">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3B65B4FF-34EE-4E39-A6B4-DCF9ED96BA9E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Launches/Model/ModelControllers/LaunchesModelController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "refresh()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3B65B4FF-34EE-4E39-A6B4-DCF9ED96BA9E - ca42b5352fcd8c5f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Launches.LaunchesModelController.refresh() -&gt; ()"
+                  moduleName = "Launches"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aboisson/SoftwareProjects/Personal/Mobiquity/Launches/Launches/Model/ModelControllers/LaunchesModelController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "39">
+               </Location>
+               <Location
+                  uuid = "3B65B4FF-34EE-4E39-A6B4-DCF9ED96BA9E - 5a60669dddbc86e6"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Launches.LaunchResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Launches.LaunchesModelController.refresh() -&gt; ()"
+                  moduleName = "Launches"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aboisson/SoftwareProjects/Personal/Mobiquity/Launches/Launches/Model/ModelControllers/LaunchesModelController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "159">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11EB87B2-0380-4AA0-81AE-0C8AA1014ABA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Launches/ViewControllers/LaunchListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "showLaunchDetails(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

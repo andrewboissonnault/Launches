@@ -56,7 +56,12 @@
 		F2503F8223AFF93300091E5F /* LaunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2503F8123AFF93300091E5F /* LaunchTableViewCell.swift */; };
 		F2503F8423AFF94400091E5F /* CellIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2503F8323AFF94400091E5F /* CellIdentifiers.swift */; };
 		F2503F8623AFF9FC00091E5F /* LaunchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2503F8523AFF9FC00091E5F /* LaunchCellViewModel.swift */; };
+		F2503F8823B005EF00091E5F /* UIImage+Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2503F8723B005EF00091E5F /* UIImage+Downloader.swift */; };
+		F2503F8C23B0099300091E5F /* LaunchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2503F8B23B0099300091E5F /* LaunchDetailsViewController.swift */; };
 		F2A2F83223AB54CF00D9FAA3 /* LaunchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2F83123AB54CF00D9FAA3 /* LaunchListViewController.swift */; };
+		F2D74CA423B012DC00FF706A /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D74CA323B012DC00FF706A /* Segues.swift */; };
+		F2D74CA623B0133600FF706A /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D74CA523B0133600FF706A /* Storyboard.swift */; };
+		F2D74CA823B02E4F00FF706A /* LaunchModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D74CA723B02E4F00FF706A /* LaunchModelController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,10 +171,15 @@
 		F2503F8123AFF93300091E5F /* LaunchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTableViewCell.swift; sourceTree = "<group>"; };
 		F2503F8323AFF94400091E5F /* CellIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiers.swift; sourceTree = "<group>"; };
 		F2503F8523AFF9FC00091E5F /* LaunchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCellViewModel.swift; sourceTree = "<group>"; };
+		F2503F8723B005EF00091E5F /* UIImage+Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Downloader.swift"; sourceTree = "<group>"; };
+		F2503F8B23B0099300091E5F /* LaunchDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailsViewController.swift; sourceTree = "<group>"; };
 		F2A2F83123AB54CF00D9FAA3 /* LaunchListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchListViewController.swift; sourceTree = "<group>"; };
 		F2A2F83923AB55EB00D9FAA3 /* LaunchIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchIntegrationTests.swift; sourceTree = "<group>"; };
 		F2A2F84123AB563C00D9FAA3 /* LaunchNetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchNetworkingError.swift; sourceTree = "<group>"; };
 		F2A2F84623AB67FC00D9FAA3 /* LaunchNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchNetworkTests.swift; sourceTree = "<group>"; };
+		F2D74CA323B012DC00FF706A /* Segues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = "<group>"; };
+		F2D74CA523B0133600FF706A /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		F2D74CA723B02E4F00FF706A /* LaunchModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchModelController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				F2503F6623AF5A4400091E5F /* DateFormatters.swift */,
+				F2503F8723B005EF00091E5F /* UIImage+Downloader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -374,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				F2503F7C23AFEFC300091E5F /* LaunchesModelController.swift */,
+				F2D74CA723B02E4F00FF706A /* LaunchModelController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -382,6 +394,9 @@
 			isa = PBXGroup;
 			children = (
 				F2A2F83123AB54CF00D9FAA3 /* LaunchListViewController.swift */,
+				F2503F8B23B0099300091E5F /* LaunchDetailsViewController.swift */,
+				F2D74CA323B012DC00FF706A /* Segues.swift */,
+				F2D74CA523B0133600FF706A /* Storyboard.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -653,6 +668,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2D74CA623B0133600FF706A /* Storyboard.swift in Sources */,
+				F2503F8C23B0099300091E5F /* LaunchDetailsViewController.swift in Sources */,
 				F214021623AB5381001BCB6B /* AppDelegate.swift in Sources */,
 				F2503F7123AF75FB00091E5F /* Rocket.swift in Sources */,
 				F2503F6D23AF748D00091E5F /* Location.swift in Sources */,
@@ -670,6 +687,9 @@
 				F2503F6F23AF757C00091E5F /* Pad.swift in Sources */,
 				F232700823AF424B00F67875 /* Launch.swift in Sources */,
 				F2503F7D23AFEFC300091E5F /* LaunchesModelController.swift in Sources */,
+				F2D74CA823B02E4F00FF706A /* LaunchModelController.swift in Sources */,
+				F2D74CA423B012DC00FF706A /* Segues.swift in Sources */,
+				F2503F8823B005EF00091E5F /* UIImage+Downloader.swift in Sources */,
 				F2503F7323AF760200091E5F /* Mission.swift in Sources */,
 				F2503F8223AFF93300091E5F /* LaunchTableViewCell.swift in Sources */,
 				F2A2F83223AB54CF00D9FAA3 /* LaunchListViewController.swift in Sources */,

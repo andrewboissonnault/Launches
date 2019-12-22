@@ -20,10 +20,18 @@ class LaunchListViewController: UITableViewController, ModelControllerObserver {
     private func setupDependencies() {
         modelController = LaunchesModelController()
         modelController.addObserver(self)
+        
+        self.refreshControl = UIRefreshControl()
+        self.tableView.refreshControl = refreshControl
+        refreshControl?.addTarget(self, action: #selector(refreshLaunches), for: .valueChanged)
+        refreshLaunches()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    @objc private func refreshLaunches() {
         modelController.refresh()
     }
     
@@ -44,13 +52,27 @@ class LaunchListViewController: UITableViewController, ModelControllerObserver {
             fatalError("Expected non nil launches object.")
         }
         let launch = launches[indexPath.row]
-        launchCell.viewModel = LaunchCellViewModel(launch : launch)
+        launchCell.viewModel = LaunchCellViewModel(launch)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let launches = self.modelController.launches else {
+            fatalError("Expected non nil launches object.")
+        }
+        let launch = launches[indexPath.row]
+        showLaunchDetails(launch)
+    }
+    
+    private func showLaunchDetails(_ launch : Launch) {
+        let vc = UIStoryboard.launchDetailsVC(launch)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func modelControllerDidUpdate(_ controller: LaunchesModelController) {
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            self.refreshControl?.endRefreshing()
         }
     }
     
