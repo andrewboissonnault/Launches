@@ -62,6 +62,11 @@
 		F2D74CA423B012DC00FF706A /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D74CA323B012DC00FF706A /* Segues.swift */; };
 		F2D74CA623B0133600FF706A /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D74CA523B0133600FF706A /* Storyboard.swift */; };
 		F2D74CA823B02E4F00FF706A /* LaunchModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D74CA723B02E4F00FF706A /* LaunchModelController.swift */; };
+		F2D74CAC23B0333400FF706A /* MissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D74CAB23B0333400FF706A /* MissionsViewController.swift */; };
+		F2D74CAE23B036A500FF706A /* MissionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D74CAD23B036A500FF706A /* MissionsViewModel.swift */; };
+		F2D74CB023B0386D00FF706A /* MissionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D74CAF23B0386D00FF706A /* MissionTableViewCell.swift */; };
+		F2FC1E2323B0738600B58ECE /* MissionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FC1E2223B0738600B58ECE /* MissionTableView.swift */; };
+		F2FC1E2523B074DD00B58ECE /* MissionContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FC1E2423B074DD00B58ECE /* MissionContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +185,11 @@
 		F2D74CA323B012DC00FF706A /* Segues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = "<group>"; };
 		F2D74CA523B0133600FF706A /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		F2D74CA723B02E4F00FF706A /* LaunchModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchModelController.swift; sourceTree = "<group>"; };
+		F2D74CAB23B0333400FF706A /* MissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsViewController.swift; sourceTree = "<group>"; };
+		F2D74CAD23B036A500FF706A /* MissionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionsViewModel.swift; sourceTree = "<group>"; };
+		F2D74CAF23B0386D00FF706A /* MissionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionTableViewCell.swift; sourceTree = "<group>"; };
+		F2FC1E2223B0738600B58ECE /* MissionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionTableView.swift; sourceTree = "<group>"; };
+		F2FC1E2423B074DD00B58ECE /* MissionContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +387,7 @@
 			children = (
 				F2503F7923AFE9F200091E5F /* LaunchListViewModel.swift */,
 				F2503F8523AFF9FC00091E5F /* LaunchCellViewModel.swift */,
+				F2D74CAD23B036A500FF706A /* MissionsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -397,6 +408,9 @@
 				F2503F8B23B0099300091E5F /* LaunchDetailsViewController.swift */,
 				F2D74CA323B012DC00FF706A /* Segues.swift */,
 				F2D74CA523B0133600FF706A /* Storyboard.swift */,
+				F2D74CAB23B0333400FF706A /* MissionsViewController.swift */,
+				F2FC1E2223B0738600B58ECE /* MissionTableView.swift */,
+				F2FC1E2423B074DD00B58ECE /* MissionContainerView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -414,6 +428,7 @@
 			children = (
 				F2503F8123AFF93300091E5F /* LaunchTableViewCell.swift */,
 				F2503F8323AFF94400091E5F /* CellIdentifiers.swift */,
+				F2D74CAF23B0386D00FF706A /* MissionTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -674,11 +689,14 @@
 				F2503F7123AF75FB00091E5F /* Rocket.swift in Sources */,
 				F2503F6D23AF748D00091E5F /* Location.swift in Sources */,
 				F2503F7723AF775400091E5F /* Payload.swift in Sources */,
+				F2FC1E2323B0738600B58ECE /* MissionTableView.swift in Sources */,
 				F2503F6723AF5A4400091E5F /* DateFormatters.swift in Sources */,
 				F2503F3623AF4D2100091E5F /* LaunchResponse.swift in Sources */,
 				F2503F6B23AF722800091E5F /* Agency.swift in Sources */,
 				F2503F8623AFF9FC00091E5F /* LaunchCellViewModel.swift in Sources */,
+				F2D74CB023B0386D00FF706A /* MissionTableViewCell.swift in Sources */,
 				F2503F8423AFF94400091E5F /* CellIdentifiers.swift in Sources */,
+				F2D74CAC23B0333400FF706A /* MissionsViewController.swift in Sources */,
 				F2503F7A23AFE9F200091E5F /* LaunchListViewModel.swift in Sources */,
 				F2503F3223AF47E300091E5F /* JSONKeys.swift in Sources */,
 				F2503F3423AF493900091E5F /* LaunchError.swift in Sources */,
@@ -686,6 +704,7 @@
 				F214021823AB5381001BCB6B /* SceneDelegate.swift in Sources */,
 				F2503F6F23AF757C00091E5F /* Pad.swift in Sources */,
 				F232700823AF424B00F67875 /* Launch.swift in Sources */,
+				F2FC1E2523B074DD00B58ECE /* MissionContainerView.swift in Sources */,
 				F2503F7D23AFEFC300091E5F /* LaunchesModelController.swift in Sources */,
 				F2D74CA823B02E4F00FF706A /* LaunchModelController.swift in Sources */,
 				F2D74CA423B012DC00FF706A /* Segues.swift in Sources */,
@@ -693,6 +712,7 @@
 				F2503F7323AF760200091E5F /* Mission.swift in Sources */,
 				F2503F8223AFF93300091E5F /* LaunchTableViewCell.swift in Sources */,
 				F2A2F83223AB54CF00D9FAA3 /* LaunchListViewController.swift in Sources */,
+				F2D74CAE23B036A500FF706A /* MissionsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

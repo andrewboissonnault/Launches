@@ -29,6 +29,7 @@ class LaunchListViewController: UITableViewController, ModelControllerObserver {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     @objc private func refreshLaunches() {
@@ -53,7 +54,7 @@ class LaunchListViewController: UITableViewController, ModelControllerObserver {
         }
         let launch = launches[indexPath.row]
         launchCell.viewModel = LaunchCellViewModel(launch)
-        return cell
+        return launchCell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -62,6 +63,11 @@ class LaunchListViewController: UITableViewController, ModelControllerObserver {
         }
         let launch = launches[indexPath.row]
         showLaunchDetails(launch)
+    }
+    
+    private func showMissions(_ missions : MissionsViewModel) {
+        let vc = UIStoryboard.missionsVC(missions)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     private func showLaunchDetails(_ launch : Launch) {

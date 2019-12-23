@@ -18,5 +18,13 @@ class LaunchModelController {
 }
 
 extension LaunchModelController {
+    
+    var basicInfo : LaunchBasicInfo {
+        return LaunchBasicInfo(launch)
+    }
+    
+    var missionsViewModel : MissionsViewModel {
+        return MissionsViewModel(launch.missions)
+    }
 
 }

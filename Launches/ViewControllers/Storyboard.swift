@@ -12,13 +12,22 @@ extension UIStoryboard {
     
     struct Name {
         static let launchDetails = "launchDetails"
+        static let missions = "missions"
     }
     
     static func launchDetailsVC(_ launch : Launch) -> LaunchDetailsViewController {
         guard let vc = self.viewController(name: Name.launchDetails) as? LaunchDetailsViewController else {
             fatalError("Error casting to LaunchDetailsViewController")
         }
-        vc.launch = launch
+        vc.launchModelController = LaunchModelController.init(launch: launch)
+        return vc
+    }
+    
+    static func missionsVC(_ viewModel : MissionsViewModel) -> MissionsViewController {
+        guard let vc = self.viewController(name: Name.missions) as? MissionsViewController else {
+            fatalError("Error casting to MissionsViewController")
+        }
+        vc.viewModel = viewModel
         return vc
     }
     

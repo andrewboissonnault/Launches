@@ -10,4 +10,5 @@ import UIKit
 
 enum CellIdentifiers : String {
     case LaunchCell
+    case MissionCell
 }

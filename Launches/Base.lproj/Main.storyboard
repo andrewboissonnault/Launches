@@ -161,19 +161,25 @@
                                                     <constraint firstItem="PXb-9M-EOG" firstAttribute="leading" secondItem="WSY-TT-AA6" secondAttribute="leading" constant="8" id="zS3-bg-UUw"/>
                                                 </constraints>
                                             </view>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEc-hJ-9N7">
-                                                <rect key="frame" x="0.0" y="250.5" width="414" height="559.5"/>
+                                            <containerView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="330" translatesAutoresizingMaskIntoConstraints="NO" id="hs8-T8-XLv" customClass="MissionContainerView" customModule="Launches" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="258.5" width="382" height="330"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="330" placeholder="YES" id="VJW-9Q-nnz"/>
+                                                </constraints>
+                                                <connections>
+                                                    <segue destination="hAQ-ai-PJ1" kind="embed" id="bQm-jA-43z"/>
+                                                </connections>
                                             </containerView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="gEc-hJ-9N7" firstAttribute="leading" secondItem="2rK-cX-2Er" secondAttribute="leading" id="3jD-6b-omI"/>
-                                            <constraint firstAttribute="bottom" secondItem="gEc-hJ-9N7" secondAttribute="bottom" constant="8" id="7Pw-PH-5cn"/>
-                                            <constraint firstAttribute="trailing" secondItem="gEc-hJ-9N7" secondAttribute="trailing" id="87e-w6-oiw"/>
-                                            <constraint firstItem="gEc-hJ-9N7" firstAttribute="top" secondItem="WSY-TT-AA6" secondAttribute="bottom" constant="8" id="BhA-1C-jMH"/>
                                             <constraint firstItem="WSY-TT-AA6" firstAttribute="leading" secondItem="2rK-cX-2Er" secondAttribute="leading" id="GvB-z4-Qlq"/>
+                                            <constraint firstItem="hs8-T8-XLv" firstAttribute="top" secondItem="WSY-TT-AA6" secondAttribute="bottom" constant="16" id="Jse-bR-XOR"/>
                                             <constraint firstAttribute="trailing" secondItem="WSY-TT-AA6" secondAttribute="trailing" id="SC7-Eo-C0f"/>
                                             <constraint firstItem="WSY-TT-AA6" firstAttribute="top" secondItem="2rK-cX-2Er" secondAttribute="top" constant="20" symbolic="YES" id="V3y-QD-gmX"/>
+                                            <constraint firstItem="hs8-T8-XLv" firstAttribute="leading" secondItem="2rK-cX-2Er" secondAttribute="leading" constant="16" id="Xpv-DF-ytK"/>
+                                            <constraint firstAttribute="trailing" secondItem="hs8-T8-XLv" secondAttribute="trailing" constant="16" id="Yte-Cu-Z0q"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -191,16 +197,17 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="OPK-i3-mNS" firstAttribute="trailing" secondItem="6O6-MR-xvR" secondAttribute="trailing" id="8IN-dG-uLu"/>
-                            <constraint firstItem="6O6-MR-xvR" firstAttribute="top" secondItem="OPK-i3-mNS" secondAttribute="top" id="E4r-8f-ooU"/>
-                            <constraint firstItem="OPK-i3-mNS" firstAttribute="bottom" secondItem="6O6-MR-xvR" secondAttribute="bottom" id="U0c-qC-1DK"/>
-                            <constraint firstItem="6O6-MR-xvR" firstAttribute="leading" secondItem="OPK-i3-mNS" secondAttribute="leading" id="hPc-FG-WNc"/>
+                            <constraint firstItem="MXd-eB-zhP" firstAttribute="trailing" secondItem="6O6-MR-xvR" secondAttribute="trailing" id="8IN-dG-uLu"/>
+                            <constraint firstItem="6O6-MR-xvR" firstAttribute="top" secondItem="MXd-eB-zhP" secondAttribute="top" id="E4r-8f-ooU"/>
+                            <constraint firstItem="MXd-eB-zhP" firstAttribute="bottom" secondItem="6O6-MR-xvR" secondAttribute="bottom" id="U0c-qC-1DK"/>
+                            <constraint firstItem="6O6-MR-xvR" firstAttribute="leading" secondItem="MXd-eB-zhP" secondAttribute="leading" id="hPc-FG-WNc"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="OPK-i3-mNS"/>
+                        <viewLayoutGuide key="safeArea" id="MXd-eB-zhP"/>
                     </view>
                     <navigationItem key="navigationItem" id="leM-vC-PcX"/>
                     <connections>
                         <outlet property="launchTime" destination="PXb-9M-EOG" id="LnE-PR-iVg"/>
+                        <outlet property="missionsContainer" destination="hs8-T8-XLv" id="BeR-S9-9cX"/>
                         <outlet property="name" destination="hdK-no-Lxu" id="MG1-c0-d5a"/>
                         <outlet property="rocketshipIcon" destination="AZC-go-Xvu" id="y9R-iS-3N9"/>
                     </connections>
@@ -209,22 +216,39 @@
             </objects>
             <point key="canvasLocation" x="995.65217391304361" y="114.50892857142857"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Missions View Controller-->
         <scene sceneID="Xel-QT-sLC">
             <objects>
-                <tableViewController id="hAQ-ai-PJ1" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RqO-BF-INu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <tableViewController storyboardIdentifier="missions" id="hAQ-ai-PJ1" customClass="MissionsViewController" customModule="Launches" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" id="RqO-BF-INu" customClass="MissionTableView" customModule="Launches" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="382" height="330"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Gef-hl-RZi">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MissionCell" id="KuC-6f-3yl" customClass="MissionTableViewCell" customModule="Launches" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="382" height="37"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gef-hl-RZi" id="iRd-oe-kCW">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KuC-6f-3yl" id="cAD-tC-GlH">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="37"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="334" translatesAutoresizingMaskIntoConstraints="NO" id="N6V-Qq-QJk">
+                                            <rect key="frame" x="8" y="8" width="366" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="N6V-Qq-QJk" firstAttribute="leading" secondItem="cAD-tC-GlH" secondAttribute="leading" constant="8" id="JcD-KF-aWZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="N6V-Qq-QJk" secondAttribute="bottom" constant="8" id="Lp5-lZ-Fll"/>
+                                        <constraint firstItem="N6V-Qq-QJk" firstAttribute="top" secondItem="cAD-tC-GlH" secondAttribute="top" constant="8" id="VXT-eE-Izm"/>
+                                        <constraint firstAttribute="trailing" secondItem="N6V-Qq-QJk" secondAttribute="trailing" constant="8" id="WCk-pT-1G0"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="N6V-Qq-QJk" id="wKs-tX-fWv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -236,7 +260,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6B-4s-qsy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="115"/>
+            <point key="canvasLocation" x="1902.8985507246377" y="114.50892857142857"/>
         </scene>
     </scenes>
 </document>

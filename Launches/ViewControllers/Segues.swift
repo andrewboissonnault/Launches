@@ -9,5 +9,5 @@
 import Foundation
 
 enum Segues : String {
-    case launchDetails
+    case embedMissions
 }

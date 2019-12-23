@@ -10,19 +10,25 @@ import UIKit
 
 class LaunchDetailsViewController: UIViewController {
     
-    var launch : Launch!
+    var launchModelController : LaunchModelController!
     
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var launchTime: UILabel!
     @IBOutlet weak var rocketshipIcon: UIImageView!
+   // @IBOutlet weak var missionsContainerHeight: NSLayoutConstraint!
+    @IBOutlet weak var missionsContainer : UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
     private func setupViews() {
-        let basicInfo = LaunchBasicInfo.init(launch)
+        let basicInfo = launchModelController.basicInfo
         name.text = basicInfo.name
         launchTime.text = basicInfo.launch
         if let url = basicInfo.rocketshipImageUrl {
@@ -30,6 +36,15 @@ class LaunchDetailsViewController: UIViewController {
         }
         else {
             self.rocketshipIcon.image = nil
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+
+        if let childViewController = segue.destination as? MissionsViewController {
+            childViewController.view.translatesAutoresizingMaskIntoConstraints = false
+            childViewController.viewModel = self.launchModelController.missionsViewModel
         }
     }
 
