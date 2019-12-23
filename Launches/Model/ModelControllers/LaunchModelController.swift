@@ -19,8 +19,8 @@ class LaunchModelController {
 
 extension LaunchModelController {
     
-    var basicInfo : LaunchBasicInfo {
-        return LaunchBasicInfo(launch)
+    var launchViewModel : LaunchViewModel {
+        return LaunchViewModel(launch)
     }
     
     var missionsViewModel : MissionsViewModel {

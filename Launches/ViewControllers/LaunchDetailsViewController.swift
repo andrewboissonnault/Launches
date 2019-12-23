@@ -15,7 +15,7 @@ class LaunchDetailsViewController: UIViewController {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var launchTime: UILabel!
     @IBOutlet weak var rocketshipIcon: UIImageView!
-   // @IBOutlet weak var missionsContainerHeight: NSLayoutConstraint!
+    @IBOutlet weak var missionCount: UILabel!
     @IBOutlet weak var missionsContainer : UIView!
     
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class LaunchDetailsViewController: UIViewController {
     }
     
     private func setupViews() {
-        let basicInfo = launchModelController.basicInfo
+        let basicInfo = launchModelController.launchViewModel.basicInfo
         name.text = basicInfo.name
         launchTime.text = basicInfo.launch
         if let url = basicInfo.rocketshipImageUrl {
@@ -37,6 +37,7 @@ class LaunchDetailsViewController: UIViewController {
         else {
             self.rocketshipIcon.image = nil
         }
+        self.missionCount.text = launchModelController.launchViewModel.mission
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

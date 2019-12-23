@@ -15,7 +15,7 @@ class LaunchTableViewCell: UITableViewCell {
     @IBOutlet weak var missionCount: UILabel!
     @IBOutlet weak var rocketshipIcon: UIImageView!
     
-    var viewModel : LaunchCellViewModel! {
+    var viewModel : LaunchViewModel! {
         didSet {
             updateViews()
         }

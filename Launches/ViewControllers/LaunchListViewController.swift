@@ -53,7 +53,7 @@ class LaunchListViewController: UITableViewController, ModelControllerObserver {
             fatalError("Expected non nil launches object.")
         }
         let launch = launches[indexPath.row]
-        launchCell.viewModel = LaunchCellViewModel(launch)
+        launchCell.viewModel = LaunchViewModel(launch)
         return launchCell
     }
     

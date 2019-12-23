@@ -126,7 +126,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSY-TT-AA6">
-                                                <rect key="frame" x="0.0" y="20" width="414" height="222.5"/>
+                                                <rect key="frame" x="0.0" y="20" width="414" height="250"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proton-M/Blok DM-03 | Elektro-L No.3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdK-no-Lxu">
                                                         <rect key="frame" x="8" y="4" width="398" height="20.5"/>
@@ -146,45 +146,54 @@
                                                             <constraint firstAttribute="width" secondItem="AZC-go-Xvu" secondAttribute="height" multiplier="1920:1200" id="W4L-Kh-8YQ"/>
                                                         </constraints>
                                                     </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Missions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xws-Lh-gya">
+                                                        <rect key="frame" x="8" y="226.5" width="398" height="19.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstItem="AZC-go-Xvu" firstAttribute="leading" secondItem="WSY-TT-AA6" secondAttribute="leading" constant="75" id="3dG-yt-iOx"/>
                                                     <constraint firstItem="hdK-no-Lxu" firstAttribute="top" secondItem="WSY-TT-AA6" secondAttribute="top" constant="4" id="IpW-83-MeA"/>
-                                                    <constraint firstAttribute="bottom" secondItem="AZC-go-Xvu" secondAttribute="bottom" constant="4" id="OUv-DR-9eQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xws-Lh-gya" secondAttribute="trailing" constant="8" id="JxZ-94-f69"/>
                                                     <constraint firstAttribute="trailing" secondItem="PXb-9M-EOG" secondAttribute="trailing" constant="8" id="QTg-yw-Rs2"/>
                                                     <constraint firstAttribute="trailing" secondItem="hdK-no-Lxu" secondAttribute="trailing" constant="8" id="a96-LI-edp"/>
+                                                    <constraint firstItem="xws-Lh-gya" firstAttribute="top" secondItem="AZC-go-Xvu" secondAttribute="bottom" constant="8" id="as3-Hd-57n"/>
                                                     <constraint firstAttribute="trailing" secondItem="AZC-go-Xvu" secondAttribute="trailing" constant="75" id="dCw-TC-zst"/>
+                                                    <constraint firstAttribute="bottom" secondItem="xws-Lh-gya" secondAttribute="bottom" constant="4" id="g4e-25-m8m"/>
                                                     <constraint firstItem="PXb-9M-EOG" firstAttribute="top" secondItem="hdK-no-Lxu" secondAttribute="bottom" constant="4" id="kFP-hl-PlY"/>
                                                     <constraint firstItem="AZC-go-Xvu" firstAttribute="top" secondItem="PXb-9M-EOG" secondAttribute="bottom" constant="9" id="oXE-cv-3st"/>
                                                     <constraint firstItem="hdK-no-Lxu" firstAttribute="leading" secondItem="WSY-TT-AA6" secondAttribute="leading" constant="8" id="rYF-yq-AbL"/>
+                                                    <constraint firstItem="xws-Lh-gya" firstAttribute="leading" secondItem="WSY-TT-AA6" secondAttribute="leading" constant="8" id="vzh-4f-t7V"/>
                                                     <constraint firstItem="PXb-9M-EOG" firstAttribute="leading" secondItem="WSY-TT-AA6" secondAttribute="leading" constant="8" id="zS3-bg-UUw"/>
                                                 </constraints>
                                             </view>
-                                            <containerView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="330" translatesAutoresizingMaskIntoConstraints="NO" id="hs8-T8-XLv" customClass="MissionContainerView" customModule="Launches" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="258.5" width="382" height="330"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="330" placeholder="YES" id="VJW-9Q-nnz"/>
-                                                </constraints>
-                                                <connections>
-                                                    <segue destination="hAQ-ai-PJ1" kind="embed" id="bQm-jA-43z"/>
-                                                </connections>
-                                            </containerView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="WSY-TT-AA6" firstAttribute="leading" secondItem="2rK-cX-2Er" secondAttribute="leading" id="GvB-z4-Qlq"/>
-                                            <constraint firstItem="hs8-T8-XLv" firstAttribute="top" secondItem="WSY-TT-AA6" secondAttribute="bottom" constant="16" id="Jse-bR-XOR"/>
                                             <constraint firstAttribute="trailing" secondItem="WSY-TT-AA6" secondAttribute="trailing" id="SC7-Eo-C0f"/>
                                             <constraint firstItem="WSY-TT-AA6" firstAttribute="top" secondItem="2rK-cX-2Er" secondAttribute="top" constant="20" symbolic="YES" id="V3y-QD-gmX"/>
-                                            <constraint firstItem="hs8-T8-XLv" firstAttribute="leading" secondItem="2rK-cX-2Er" secondAttribute="leading" constant="16" id="Xpv-DF-ytK"/>
-                                            <constraint firstAttribute="trailing" secondItem="hs8-T8-XLv" secondAttribute="trailing" constant="16" id="Yte-Cu-Z0q"/>
                                         </constraints>
                                     </view>
+                                    <containerView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="330" translatesAutoresizingMaskIntoConstraints="NO" id="hs8-T8-XLv" customClass="MissionContainerView" customModule="Launches" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="286" width="382" height="330"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="330" placeholder="YES" id="VJW-9Q-nnz"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="hAQ-ai-PJ1" kind="embed" id="bQm-jA-43z"/>
+                                        </connections>
+                                    </containerView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="hs8-T8-XLv" firstAttribute="top" secondItem="WSY-TT-AA6" secondAttribute="bottom" constant="16" id="2OW-mN-hGw"/>
+                                    <constraint firstItem="hs8-T8-XLv" firstAttribute="leading" secondItem="6O6-MR-xvR" secondAttribute="leading" constant="16" id="8Hy-VS-pqx"/>
                                     <constraint firstItem="2rK-cX-2Er" firstAttribute="leading" secondItem="6O6-MR-xvR" secondAttribute="leading" id="CiN-62-ifM"/>
+                                    <constraint firstAttribute="trailing" secondItem="hs8-T8-XLv" secondAttribute="trailing" constant="16" id="E7V-Jq-Eqc"/>
                                     <constraint firstItem="2rK-cX-2Er" firstAttribute="top" secondItem="6O6-MR-xvR" secondAttribute="top" id="P5j-K1-zVR"/>
                                     <constraint firstAttribute="trailing" secondItem="2rK-cX-2Er" secondAttribute="trailing" id="lGc-yV-xlo"/>
                                     <constraint firstItem="2rK-cX-2Er" firstAttribute="centerY" secondItem="6O6-MR-xvR" secondAttribute="centerY" id="ldU-q1-t2C"/>
@@ -207,6 +216,7 @@
                     <navigationItem key="navigationItem" id="leM-vC-PcX"/>
                     <connections>
                         <outlet property="launchTime" destination="PXb-9M-EOG" id="LnE-PR-iVg"/>
+                        <outlet property="missionCount" destination="xws-Lh-gya" id="rCS-7N-n40"/>
                         <outlet property="missionsContainer" destination="hs8-T8-XLv" id="BeR-S9-9cX"/>
                         <outlet property="name" destination="hdK-no-Lxu" id="MG1-c0-d5a"/>
                         <outlet property="rocketshipIcon" destination="AZC-go-Xvu" id="y9R-iS-3N9"/>

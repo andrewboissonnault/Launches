@@ -51,7 +51,6 @@
 		F2503F7123AF75FB00091E5F /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2503F7023AF75FB00091E5F /* Rocket.swift */; };
 		F2503F7323AF760200091E5F /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2503F7223AF760200091E5F /* Mission.swift */; };
 		F2503F7723AF775400091E5F /* Payload.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2503F7623AF775400091E5F /* Payload.swift */; };
-		F2503F7A23AFE9F200091E5F /* LaunchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2503F7923AFE9F200091E5F /* LaunchListViewModel.swift */; };
 		F2503F7D23AFEFC300091E5F /* LaunchesModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2503F7C23AFEFC300091E5F /* LaunchesModelController.swift */; };
 		F2503F8223AFF93300091E5F /* LaunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2503F8123AFF93300091E5F /* LaunchTableViewCell.swift */; };
 		F2503F8423AFF94400091E5F /* CellIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2503F8323AFF94400091E5F /* CellIdentifiers.swift */; };
@@ -171,7 +170,6 @@
 		F2503F7023AF75FB00091E5F /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
 		F2503F7223AF760200091E5F /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		F2503F7623AF775400091E5F /* Payload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payload.swift; sourceTree = "<group>"; };
-		F2503F7923AFE9F200091E5F /* LaunchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListViewModel.swift; sourceTree = "<group>"; };
 		F2503F7C23AFEFC300091E5F /* LaunchesModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchesModelController.swift; sourceTree = "<group>"; };
 		F2503F8123AFF93300091E5F /* LaunchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTableViewCell.swift; sourceTree = "<group>"; };
 		F2503F8323AFF94400091E5F /* CellIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiers.swift; sourceTree = "<group>"; };
@@ -385,7 +383,6 @@
 		F2503F7823AFE9CA00091E5F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				F2503F7923AFE9F200091E5F /* LaunchListViewModel.swift */,
 				F2503F8523AFF9FC00091E5F /* LaunchCellViewModel.swift */,
 				F2D74CAD23B036A500FF706A /* MissionsViewModel.swift */,
 			);
@@ -697,7 +694,6 @@
 				F2D74CB023B0386D00FF706A /* MissionTableViewCell.swift in Sources */,
 				F2503F8423AFF94400091E5F /* CellIdentifiers.swift in Sources */,
 				F2D74CAC23B0333400FF706A /* MissionsViewController.swift in Sources */,
-				F2503F7A23AFE9F200091E5F /* LaunchListViewModel.swift in Sources */,
 				F2503F3223AF47E300091E5F /* JSONKeys.swift in Sources */,
 				F2503F3423AF493900091E5F /* LaunchError.swift in Sources */,
 				F232700A23AF426800F67875 /* LaunchAPI.swift in Sources */,

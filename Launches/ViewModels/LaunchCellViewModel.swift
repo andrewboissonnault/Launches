@@ -14,7 +14,7 @@ struct LaunchBasicInfo {
     let rocketshipImageUrl : URL?
 }
 
-struct LaunchCellViewModel {
+struct LaunchViewModel {
     let basicInfo : LaunchBasicInfo
     let mission : String
 }
@@ -33,10 +33,10 @@ extension LaunchBasicInfo {
     }
 }
 
-extension LaunchCellViewModel {
+extension LaunchViewModel {
     init(_ launch : Launch) {
         self.basicInfo = LaunchBasicInfo.init(launch)
-        self.mission = LaunchCellViewModel.missionText(count : launch.missions.count)
+        self.mission = LaunchViewModel.missionText(count : launch.missions.count)
     }
     
     private static func missionText(count : Int) -> String {

@@ -22,6 +22,6 @@ class MissionTableViewCell: UITableViewCell {
     }
 
     private func updateViews() {
-        self.descriptionLabel.text = viewModel.description
+        self.descriptionLabel.attributedText = viewModel.description
     }
 }
