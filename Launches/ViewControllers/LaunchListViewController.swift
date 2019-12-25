@@ -15,16 +15,20 @@ class LaunchListViewController: UITableViewController, ModelControllerObserver {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDependencies()
+        setupRefresh()
+        tableView.isHidden = true
+        refreshLaunches()
     }
     
     private func setupDependencies() {
         modelController = LaunchesModelController()
         modelController.addObserver(self)
-        
+    }
+    
+    private func setupRefresh() {
         self.refreshControl = UIRefreshControl()
         self.tableView.refreshControl = refreshControl
         refreshControl?.addTarget(self, action: #selector(refreshLaunches), for: .valueChanged)
-        refreshLaunches()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,7 +49,7 @@ class LaunchListViewController: UITableViewController, ModelControllerObserver {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.LaunchCell.rawValue, for: indexPath)
+        let cell = tableView.dequeueReusableCell(identifier: .LaunchCell, for: indexPath)
         guard let launchCell = cell as? LaunchTableViewCell else {
             fatalError("Error casting cell into LaunchTableViewCell")
         }
@@ -77,10 +81,10 @@ class LaunchListViewController: UITableViewController, ModelControllerObserver {
     
     func modelControllerDidUpdate(_ controller: LaunchesModelController) {
         DispatchQueue.main.async {
+            self.tableView.isHidden = false
             self.tableView.reloadData()
             self.refreshControl?.endRefreshing()
         }
     }
     
 }
-

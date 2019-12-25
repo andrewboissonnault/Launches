@@ -8,13 +8,6 @@
 
 import Foundation
 
-enum LaunchStatus : Int, Codable {
-    case Green = 1
-    case Red
-    case Success
-    case Failed
-}
-
 struct Launch : Codable {
     let id : Int
     let name : String

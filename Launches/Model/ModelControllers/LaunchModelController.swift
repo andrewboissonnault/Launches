@@ -26,5 +26,17 @@ extension LaunchModelController {
     var missionsViewModel : MissionsViewModel {
         return MissionsViewModel(launch.missions)
     }
+    
+    var agencyViewModel : AgencyViewModel {
+        return AgencyViewModel(launch.lsp)
+    }
+    
+    var locationViewModel : LocationViewModel {
+        return LocationViewModel(launch.location)
+    }
+    
+    var rocketViewModel : RocketViewModel {
+        return RocketViewModel(launch.rocket)
+    }
 
 }

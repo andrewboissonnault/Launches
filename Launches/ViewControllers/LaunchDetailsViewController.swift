@@ -17,6 +17,9 @@ class LaunchDetailsViewController: UIViewController {
     @IBOutlet weak var rocketshipIcon: UIImageView!
     @IBOutlet weak var missionCount: UILabel!
     @IBOutlet weak var missionsContainer : UIView!
+    @IBOutlet weak var agencyTextView: ContentTextView!
+    @IBOutlet weak var locationTextView: ContentTextView!
+    @IBOutlet weak var rocketTextView: ContentTextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +31,8 @@ class LaunchDetailsViewController: UIViewController {
     }
     
     private func setupViews() {
-        let basicInfo = launchModelController.launchViewModel.basicInfo
-        name.text = basicInfo.name
+        let basicInfo = launchModelController.launchViewModel
+        name.attributedText = basicInfo.name
         launchTime.text = basicInfo.launch
         if let url = basicInfo.rocketshipImageUrl {
             rocketshipIcon.setImageFromURL(url)
@@ -37,7 +40,10 @@ class LaunchDetailsViewController: UIViewController {
         else {
             self.rocketshipIcon.image = nil
         }
-        self.missionCount.text = launchModelController.launchViewModel.mission
+        self.missionCount.text = basicInfo.mission
+        self.agencyTextView.attributedText = launchModelController.agencyViewModel.text
+        self.locationTextView.attributedText = launchModelController.locationViewModel.text
+        self.rocketTextView.attributedText = launchModelController.rocketViewModel.text
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

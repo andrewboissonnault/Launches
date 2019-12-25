@@ -35,7 +35,7 @@ class MissionsViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.MissionCell.rawValue, for: indexPath)
+        let cell = tableView.dequeueReusableCell(identifier: .MissionCell, for: indexPath)
         guard let missionCell = cell as? MissionTableViewCell else {
             fatalError("Error casting cell into MissionTableViewCell")
         }

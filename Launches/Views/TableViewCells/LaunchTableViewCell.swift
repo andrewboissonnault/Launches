@@ -27,10 +27,10 @@ class LaunchTableViewCell: UITableViewCell {
     }
 
     private func updateViews() {
-        self.name.text = viewModel.basicInfo.name
-        self.launchTime.text = viewModel.basicInfo.launch
+        self.name.attributedText = viewModel.name
+        self.launchTime.text = viewModel.launch
         self.missionCount.text = viewModel.mission
-        if let url = viewModel.basicInfo.rocketshipImageUrl {
+        if let url = viewModel.rocketshipImageUrl {
             self.rocketshipIcon.setImageFromURL(url)
         }
         else {
