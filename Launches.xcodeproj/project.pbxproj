@@ -73,6 +73,14 @@
 		F2FC1E3523B0931A00B58ECE /* LaunchStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FC1E3423B0931A00B58ECE /* LaunchStatus.swift */; };
 		F2FC1E3723B09FF500B58ECE /* UITableViewCell+Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FC1E3623B09FF500B58ECE /* UITableViewCell+Identifiers.swift */; };
 		F2FC1E3923B0A05500B58ECE /* NSAttributedString+Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FC1E3823B0A05500B58ECE /* NSAttributedString+Set.swift */; };
+		F2FC1E3B23B3F6C300B58ECE /* LanchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FC1E3A23B3F6C300B58ECE /* LanchViewModelTests.swift */; };
+		F2FC1E3D23B41E8D00B58ECE /* ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FC1E3C23B41E8D00B58ECE /* ImageName.swift */; };
+		F2FC1E3F23B4279E00B58ECE /* MissionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FC1E3E23B4279E00B58ECE /* MissionViewModelTests.swift */; };
+		F2FC1E4123B42D8E00B58ECE /* AgencyViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FC1E4023B42D8E00B58ECE /* AgencyViewModelTests.swift */; };
+		F2FC1E4323B4355C00B58ECE /* NSAttributedString+Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FC1E4223B4355C00B58ECE /* NSAttributedString+Test.swift */; };
+		F2FC1E4523B4356700B58ECE /* ModelBuilders.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FC1E4423B4356700B58ECE /* ModelBuilders.swift */; };
+		F2FC1E4723B439C800B58ECE /* LocationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FC1E4623B439C800B58ECE /* LocationViewModelTests.swift */; };
+		F2FC1E4923B4406800B58ECE /* RocketViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FC1E4823B4406800B58ECE /* RocketViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,6 +210,14 @@
 		F2FC1E3423B0931A00B58ECE /* LaunchStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchStatus.swift; sourceTree = "<group>"; };
 		F2FC1E3623B09FF500B58ECE /* UITableViewCell+Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Identifiers.swift"; sourceTree = "<group>"; };
 		F2FC1E3823B0A05500B58ECE /* NSAttributedString+Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Set.swift"; sourceTree = "<group>"; };
+		F2FC1E3A23B3F6C300B58ECE /* LanchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanchViewModelTests.swift; sourceTree = "<group>"; };
+		F2FC1E3C23B41E8D00B58ECE /* ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageName.swift; sourceTree = "<group>"; };
+		F2FC1E3E23B4279E00B58ECE /* MissionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionViewModelTests.swift; sourceTree = "<group>"; };
+		F2FC1E4023B42D8E00B58ECE /* AgencyViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgencyViewModelTests.swift; sourceTree = "<group>"; };
+		F2FC1E4223B4355C00B58ECE /* NSAttributedString+Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Test.swift"; sourceTree = "<group>"; };
+		F2FC1E4423B4356700B58ECE /* ModelBuilders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelBuilders.swift; sourceTree = "<group>"; };
+		F2FC1E4623B439C800B58ECE /* LocationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModelTests.swift; sourceTree = "<group>"; };
+		F2FC1E4823B4406800B58ECE /* RocketViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,6 +379,11 @@
 				F2503F3D23AF4ED800091E5F /* LaunchTests.swift */,
 				F2503F3F23AF4ED800091E5F /* Info.plist */,
 				F2503F6823AF61B100091E5F /* DateFormatterTests.swift */,
+				F2FC1E3A23B3F6C300B58ECE /* LanchViewModelTests.swift */,
+				F2FC1E3E23B4279E00B58ECE /* MissionViewModelTests.swift */,
+				F2FC1E4023B42D8E00B58ECE /* AgencyViewModelTests.swift */,
+				F2FC1E4623B439C800B58ECE /* LocationViewModelTests.swift */,
+				F2FC1E4823B4406800B58ECE /* RocketViewModelTests.swift */,
 			);
 			path = LaunchTests;
 			sourceTree = "<group>";
@@ -383,6 +404,8 @@
 				F2503F5D23AF54E200091E5F /* JSONFromFile.swift */,
 				F2503F5423AF535D00091E5F /* testResponse.json */,
 				F2503F5323AF535D00091E5F /* testSerializationError.json */,
+				F2FC1E4223B4355C00B58ECE /* NSAttributedString+Test.swift */,
+				F2FC1E4423B4356700B58ECE /* ModelBuilders.swift */,
 			);
 			path = TestsShared;
 			sourceTree = "<group>";
@@ -473,6 +496,7 @@
 				F2FC1E3223B092D500B58ECE /* UIFont+Launches.swift */,
 				F2FC1E3623B09FF500B58ECE /* UITableViewCell+Identifiers.swift */,
 				F2FC1E3823B0A05500B58ECE /* NSAttributedString+Set.swift */,
+				F2FC1E3C23B41E8D00B58ECE /* ImageName.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -718,6 +742,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2FC1E3523B0931A00B58ECE /* LaunchStatus.swift in Sources */,
+				F2FC1E3D23B41E8D00B58ECE /* ImageName.swift in Sources */,
 				F2D74CA623B0133600FF706A /* Storyboard.swift in Sources */,
 				F2503F8C23B0099300091E5F /* LaunchDetailsViewController.swift in Sources */,
 				F2FC1E3323B092D500B58ECE /* UIFont+Launches.swift in Sources */,
@@ -793,9 +818,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2503F6923AF61B100091E5F /* DateFormatterTests.swift in Sources */,
+				F2FC1E4123B42D8E00B58ECE /* AgencyViewModelTests.swift in Sources */,
+				F2FC1E3F23B4279E00B58ECE /* MissionViewModelTests.swift in Sources */,
+				F2FC1E4323B4355C00B58ECE /* NSAttributedString+Test.swift in Sources */,
 				F2503F5E23AF54E200091E5F /* JSONFromFile.swift in Sources */,
+				F2FC1E3B23B3F6C300B58ECE /* LanchViewModelTests.swift in Sources */,
 				F2503F5923AF549F00091E5F /* MockURLSession.swift in Sources */,
+				F2FC1E4923B4406800B58ECE /* RocketViewModelTests.swift in Sources */,
+				F2FC1E4523B4356700B58ECE /* ModelBuilders.swift in Sources */,
 				F2503F3E23AF4ED800091E5F /* LaunchTests.swift in Sources */,
+				F2FC1E4723B439C800B58ECE /* LocationViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

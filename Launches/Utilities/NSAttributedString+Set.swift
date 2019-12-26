@@ -14,10 +14,14 @@ extension NSAttributedString {
         let attributed = NSMutableAttributedString.init(string: string, attributes: UIFont.detailsAttributes())
         if let safeUrlString = urlString {
             if let safeUrl = URL.init(string: safeUrlString) {
-                attributed.setAttributes(UIFont.linkAttributes(safeUrl), range: NSRange.init(location: 0, length: attributed.length))
+                attributed.setAttributes(UIFont.linkAttributes(safeUrl), range: attributed.fullRange)
             }
         }
         return attributed
+    }
+    
+    public var fullRange : NSRange {
+        return NSRange.init(location: 0, length: self.length)
     }
     
 }

@@ -18,5 +18,4 @@ struct Payload : Codable {
     let weight : String?
     let total : Int?
     let missionId : String?
-    let changed : String?
 }

@@ -302,9 +302,9 @@
             filePath = "LaunchTests/LaunchTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "testFetchLaunchesWithSerializationError()"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "testFetchLaunchesWithMissingData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -735,6 +735,22 @@
             startingLineNumber = "20"
             endingLineNumber = "20"
             landmarkName = "buildWithLink(string:urlString:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0FE32A8C-38FC-4DD7-B702-12D727043662"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LaunchTests/MissionViewModelTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "testLaunchNameSuccess()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

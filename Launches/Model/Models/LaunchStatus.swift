@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum LaunchStatus : Int, Codable {
+enum LaunchStatus : Int, Codable, CaseIterable {
     case Green = 1
     case Red
     case Success

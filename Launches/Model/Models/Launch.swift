@@ -24,7 +24,6 @@ struct Launch : Codable {
     let probability : Int
     let hashtag : String?
     let lsp : Agency
-    let changed : String
     let location : Location
     let rocket : Rocket
     let missions : [Mission]

@@ -16,5 +16,4 @@ struct Agency : Codable {
     let countryCode : String
     let wikiURL : String
     let infoURLs : [String]
-    let changed : String
 }

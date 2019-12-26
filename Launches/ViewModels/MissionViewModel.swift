@@ -19,6 +19,9 @@ extension MissionViewModel {
     
     private static func descriptionText(_ mission : Mission) -> NSAttributedString {
         let name = NSMutableAttributedString.init(string: mission.name, attributes: UIFont.detailsBoldAttributes())
+        if mission.description.count == 0 {
+            return name
+        }
         let descriptionString = " - \(mission.description)"
         let description = NSAttributedString.init(string: descriptionString, attributes: UIFont.detailsAttributes())
         name.append(description)

@@ -29,9 +29,7 @@ extension LaunchViewModel {
         if count == 1 {
             return "1 Mission"
         }
-        else {
-            return "\(count) Missions"
-        }
+        return "\(count) Missions"
     }
     
     private static func launchText(_ launch : Launch) -> String {
@@ -53,36 +51,8 @@ extension LaunchViewModel {
     }
     
     private static func statusIcon(_ status : LaunchStatus) -> UIImage? {
-        let name = LaunchViewModel.statusIconName(status)
+        let name = ImageName.imageNameWithStatus(status)
         let image = UIImage(name: name)
         return image
     }
-    
-    private static func statusIconName(_ status : LaunchStatus) -> ImageName {
-        switch status {
-        case .Success:
-            return .success
-        case .Failed:
-            return .failure
-        case .Green:
-            return .green
-        case .Red:
-            return .red
-        }
-    }
-}
-
-enum ImageName : String{
-    case success
-    case green
-    case red
-    case failure
-}
-
-extension UIImage {
-    
-    convenience init?(name: ImageName) {
-        self.init(named: name.rawValue)
-    }
-    
 }

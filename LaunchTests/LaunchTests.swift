@@ -40,9 +40,79 @@ class LaunchTests: XCTestCase {
                 return
             }
             
+            let expectedStart = isoFormatter.date(from: "20191224T120000Z")
+            let expectedEnd = isoFormatter.date(from: "20191224T124000Z")
+            let expectedNet = isoFormatter.date(from: "20191224T120302Z")
+            
             XCTAssertEqual(first.id, 1212)
             XCTAssertEqual(first.name, "Proton-M/Blok DM-03 | Elektro-L No.3")
+            XCTAssertEqual(first.tbddate, 4)
+            XCTAssertEqual(first.tbdtime, 3)
+            XCTAssertEqual(first.status, LaunchStatus.Green)
+            XCTAssertEqual(first.infoURLs, ["http://www.google.com"])
+            XCTAssertEqual(first.vidURLs, ["http://www.youtube.com"])
+            XCTAssertEqual(first.isostart, expectedStart)
+            XCTAssertEqual(first.isoend, expectedEnd)
+            XCTAssertEqual(first.isonet, expectedNet)
+            XCTAssertEqual(first.holdreason, "Lack of Funding")
+            XCTAssertEqual(first.failreason, "Bad Materials")
+            XCTAssertEqual(first.probability, 50)
+            XCTAssertEqual(first.hashtag, "Launh")
+            
+            let agency = first.lsp
+            
+            XCTAssertEqual(agency.id, 96)
+            XCTAssertEqual(agency.name, "Khrunichev State Research and Production Space Center")
+            XCTAssertEqual(agency.abbrev, "KhSC")
+            XCTAssertEqual(agency.countryCode, "RUS")
+            XCTAssertEqual(agency.type, 1)
+            XCTAssertEqual(agency.infoURLs, ["http://www.khrunichev.ru/main.php?lang=en"])
+            XCTAssertEqual(agency.wikiURL, "http://en.wikipedia.org/wiki/Khrunichev_State_Research_and_Production_Space_Center")
+            
+            let location = first.location
+            
+            XCTAssertEqual(location.id, 10)
+            XCTAssertEqual(location.name, "Baikonur Cosmodrome, Republic of Kazakhstan")
+            XCTAssertEqual(location.countryCode, "KAZ")
+            
+            let pad = first.location.pads.first!
+            
+            XCTAssertEqual(pad.id, 35)
+            XCTAssertEqual(pad.name, "81/24 (81P), Baikonur Cosmodrome, Kazakhstan")
+            XCTAssertEqual(pad.mapURL, "http://maps.google.com/maps?q=46.071+N,+62.985+E")
+            XCTAssertEqual(pad.latitude, 46.071001)
+            XCTAssertEqual(pad.longitude, 62.984999)
 
+            let rocket = first.rocket
+            
+            XCTAssertEqual(rocket.id, 62)
+            XCTAssertEqual(rocket.name, "Proton-M/Blok DM-03")
+            XCTAssertEqual(rocket.configuration, "-M/Blok DM-03")
+            XCTAssertEqual(rocket.familyname, "Proton / UR-500")
+            XCTAssertEqual(rocket.wikiURL, "https://en.wikipedia.org/wiki/Proton-M")
+            XCTAssertEqual(rocket.infoURLs, [])
+            XCTAssertEqual(rocket.imageURL, "https://s3.amazonaws.com/launchlibrary/RocketImages/placeholder_1920.png")
+            XCTAssertEqual(rocket.imageSizes, [320, 480, 640, 720, 768, 800, 960, 1024, 1080, 1280, 1440, 1920])
+            
+            let mission = first.missions.first!
+            
+            XCTAssertEqual(mission.id, 866)
+            XCTAssertEqual(mission.name, "Elektro-L No.3")
+            XCTAssertEqual(mission.description, "Elektro-L is a series of meteorological satellites developed for the Russian Federal Space Agency by NPO Lavochkin. They are designed to capture real-time images of clouds and the Earths underlying surface, heliogeophysical measurements, collection and translating hydrometeorological and service data.")
+            XCTAssertEqual(mission.type, 1)
+            XCTAssertEqual(mission.wikiURL, "https://en.wikipedia.org/wiki/Elektro%E2%80%93L")
+            XCTAssertEqual(mission.typeName, "Earth Science")
+            
+            let missionAgency = mission.agencies!.first!
+            
+            XCTAssertEqual(missionAgency.id, 63)
+            XCTAssertEqual(missionAgency.name, "Russian Federal Space Agency (ROSCOSMOS)")
+            XCTAssertEqual(missionAgency.abbrev, "RFSA")
+            XCTAssertEqual(missionAgency.countryCode, "RUS")
+            XCTAssertEqual(missionAgency.type, 1)
+            XCTAssertEqual(missionAgency.infoURLs, ["http://en.roscosmos.ru/", "https://www.youtube.com/channel/UCOcpUgXosMCIlOsreUfNFiA", "https://twitter.com/Roscosmos", "https://www.facebook.com/Roscosmos"])
+            XCTAssertEqual(missionAgency.wikiURL, "http://en.wikipedia.org/wiki/Russian_Federal_Space_Agency")
+            
 
             expectation.fulfill()
         }
