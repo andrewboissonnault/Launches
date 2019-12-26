@@ -30,7 +30,7 @@
       codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F2503F4823AF4F1800091E5F"
@@ -40,7 +40,7 @@
             </BuildableReference>
          </TestableReference>
          <TestableReference
-            skipped = "NO">
+            skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F2326FD523AF1EE500F67875"
@@ -50,7 +50,7 @@
             </BuildableReference>
          </TestableReference>
          <TestableReference
-            skipped = "NO">
+            skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F2326FF723AF2C1F00F67875"
@@ -60,12 +60,22 @@
             </BuildableReference>
          </TestableReference>
          <TestableReference
-            skipped = "NO">
+            skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F2503F3A23AF4ED800091E5F"
                BuildableName = "LaunchTests.xctest"
                BlueprintName = "LaunchTests"
+               ReferencedContainer = "container:Launches.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F2FC1E6123B44BED00B58ECE"
+               BuildableName = "LaunchesUITests.xctest"
+               BlueprintName = "LaunchesUITests"
                ReferencedContainer = "container:Launches.xcodeproj">
             </BuildableReference>
          </TestableReference>

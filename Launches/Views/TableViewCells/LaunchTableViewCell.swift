@@ -32,5 +32,4 @@ class LaunchTableViewCell: UITableViewCell {
             self.rocketshipIcon.image = nil
         }
     }
-
 }

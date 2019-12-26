@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum ImageName : String{
+enum ImageName : String {
     case success
     case green
     case red

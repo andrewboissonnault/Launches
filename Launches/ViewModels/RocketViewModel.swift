@@ -20,7 +20,7 @@ extension RocketViewModel {
 
 extension RocketViewModel {
     private static func descriptionText(_ rocket : Rocket) -> NSAttributedString {
-        let name = NSMutableAttributedString.buildWithLink(string: rocket.name, urlString: rocket.wikiURL)
+        let name = NSMutableAttributedString.buildWithLink(string: rocket.name, urlString: rocket.wikiURL, isCentered: true)
         return name
     }
 }

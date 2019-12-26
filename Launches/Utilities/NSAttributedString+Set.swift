@@ -10,11 +10,12 @@ import UIKit
 
 extension NSAttributedString {
     
-    static func buildWithLink(string : String, urlString : String?) -> NSAttributedString {
+    static func buildWithLink(string : String, urlString : String?, isCentered : Bool = false) -> NSAttributedString {
         let attributed = NSMutableAttributedString.init(string: string, attributes: UIFont.detailsAttributes())
         if let safeUrlString = urlString {
             if let safeUrl = URL.init(string: safeUrlString) {
-                attributed.setAttributes(UIFont.linkAttributes(safeUrl), range: attributed.fullRange)
+                let attributes = isCentered ? UIFont.linkHeaderAttributes(safeUrl) : UIFont.linkAttributes(safeUrl)
+                attributed.setAttributes(attributes, range: attributed.fullRange)
             }
         }
         return attributed
