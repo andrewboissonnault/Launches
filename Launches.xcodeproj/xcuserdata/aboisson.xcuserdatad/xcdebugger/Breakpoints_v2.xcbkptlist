@@ -661,16 +661,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "855DDCF7-1BC3-47C2-8DA5-9A32CC2CBE86"
+            uuid = "4173B140-F8DB-4EC7-A02E-2477CBC510DF"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LaunchesUITests/LaunchesUITests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "testExample()"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "testList()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

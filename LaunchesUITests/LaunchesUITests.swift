@@ -23,21 +23,43 @@ class LaunchesUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    func testList() {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testLaunchPerformance() {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-                XCUIApplication().launch()
-            }
+        
+        let tablesQuery = app.tables
+        let cells = tablesQuery.cells
+        let count = cells.count
+        XCTAssert(count == 20)
+        
+        for i in 0..<cells.count {
+            let element = cells.element(boundBy: i)
+            let height = element.frame.size.height
+            
+            let text1 = element.staticTexts.element(boundBy: 0)
+            let text2 = element.staticTexts.element(boundBy: 1)
+            let text3 = element.staticTexts.element(boundBy: 2)
+            
+            XCTAssert(text1.exists)
+            XCTAssert(text2.exists)
+            XCTAssert(text3.exists)
+            XCTAssert(cells.element.exists)
+            XCTAssertGreaterThanOrEqual(height, 200)
         }
+    }
+    
+    func testDetails() {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+        
+        let tablesQuery = app.tables
+        let cells = tablesQuery.cells
+        
+        let element = cells.element(boundBy: 0)
+        element.tap()
+        
+        
     }
 }
