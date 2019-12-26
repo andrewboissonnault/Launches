@@ -38,10 +38,4 @@ extension UIFont {
     static func linkAttributes(_ url : URL) -> [NSAttributedString.Key : Any] {
         return [NSAttributedString.Key.font : UIFont.detailsFont(), NSAttributedString.Key.link : url]
     }
-    
-    static func linkHeaderAttributes(_ url : URL) -> [NSAttributedString.Key : Any] {
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.alignment = .center
-        return [NSAttributedString.Key.font : UIFont.detailsFont(), NSAttributedString.Key.link : url, NSAttributedString.Key.paragraphStyle : paragraphStyle]
-    }
 }

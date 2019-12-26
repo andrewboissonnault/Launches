@@ -21,11 +21,6 @@ class LaunchTableViewCell: UITableViewCell {
         }
     }
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
     private func updateViews() {
         self.name.attributedText = viewModel.name
         self.launchTime.text = viewModel.launch

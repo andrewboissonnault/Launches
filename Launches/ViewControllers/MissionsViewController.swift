@@ -22,9 +22,9 @@ class MissionsViewController: UITableViewController {
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
+}
 
-    // MARK: - Table view data source
-
+extension MissionsViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -43,7 +43,9 @@ class MissionsViewController: UITableViewController {
         missionCell.viewModel = mission
         return missionCell
     }
-    
+}
+
+extension MissionsViewController {
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 55
     }

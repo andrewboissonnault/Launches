@@ -27,6 +27,7 @@ class LaunchDetailsViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = false
     }
     
@@ -54,5 +55,4 @@ class LaunchDetailsViewController: UIViewController {
             childViewController.viewModel = self.launchModelController.missionsViewModel
         }
     }
-
 }

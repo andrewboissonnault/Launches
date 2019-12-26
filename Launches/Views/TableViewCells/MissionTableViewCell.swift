@@ -16,10 +16,6 @@ class MissionTableViewCell: UITableViewCell {
             updateViews()
         }
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
 
     private func updateViews() {
         self.descriptionLabel.attributedText = viewModel.description

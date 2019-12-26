@@ -9,7 +9,6 @@
 import UIKit
 
 extension UIStoryboard {
-    
     struct Name {
         static let launchDetails = "launchDetails"
         static let missions = "missions"

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LaunchListViewController: UITableViewController, ModelControllerObserver {
+class LaunchListViewController: UITableViewController {
     
     var modelController : LaunchesModelController!
     
@@ -40,6 +40,13 @@ class LaunchListViewController: UITableViewController, ModelControllerObserver {
         modelController.refresh()
     }
     
+    private func showLaunchDetails(_ launch : Launch) {
+        let vc = UIStoryboard.launchDetailsVC(launch)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension LaunchListViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -68,17 +75,9 @@ class LaunchListViewController: UITableViewController, ModelControllerObserver {
         let launch = launches[indexPath.row]
         showLaunchDetails(launch)
     }
-    
-    private func showMissions(_ missions : MissionsViewModel) {
-        let vc = UIStoryboard.missionsVC(missions)
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    private func showLaunchDetails(_ launch : Launch) {
-        let vc = UIStoryboard.launchDetailsVC(launch)
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
+}
+
+extension LaunchListViewController : ModelControllerObserver {
     func modelControllerDidUpdate(_ controller: LaunchesModelController) {
         DispatchQueue.main.async {
             self.tableView.isHidden = false
@@ -86,5 +85,4 @@ class LaunchListViewController: UITableViewController, ModelControllerObserver {
             self.refreshControl?.endRefreshing()
         }
     }
-    
 }
