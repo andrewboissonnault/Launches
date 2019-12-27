@@ -20,7 +20,7 @@ extension LocationViewModel {
 
 extension LocationViewModel {
     private static func descriptionText(_ location : Location) -> NSAttributedString {
-        let locationString = "\(location.name) (\(location.countryCode))\n"
+        let locationString = "\(location.name) (\(location.countryCode))"
         let locationText = NSMutableAttributedString.init(string: locationString, attributes: UIFont.headerAttributes())
         
         for pad in location.pads {

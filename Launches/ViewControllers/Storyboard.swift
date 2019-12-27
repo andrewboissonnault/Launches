@@ -22,14 +22,6 @@ extension UIStoryboard {
         return vc
     }
     
-    static func missionsVC(_ viewModel : MissionsViewModel) -> MissionsViewController {
-        guard let vc = self.viewController(name: Name.missions) as? MissionsViewController else {
-            fatalError("Error casting to MissionsViewController")
-        }
-        vc.viewModel = viewModel
-        return vc
-    }
-    
     static func viewController(name: String, storyboard : UIStoryboard = mainStoryboard()) -> UIViewController {
         let vc = storyboard.instantiateViewController(withIdentifier: name)
         return vc

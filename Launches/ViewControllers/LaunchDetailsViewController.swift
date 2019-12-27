@@ -17,9 +17,9 @@ class LaunchDetailsViewController: UIViewController {
     @IBOutlet weak var rocketshipIcon: UIImageView!
     @IBOutlet weak var missionCount: UILabel!
     @IBOutlet weak var missionsContainer : UIView!
-    @IBOutlet weak var agencyTextView: ContentTextView!
-    @IBOutlet weak var locationTextView: ContentTextView!
-    @IBOutlet weak var rocketTextView: ContentTextView!
+    @IBOutlet weak var agencyTextView: UIView!
+    @IBOutlet weak var locationTextView: NewLineTextView!
+    @IBOutlet weak var rocketTextView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +45,14 @@ class LaunchDetailsViewController: UIViewController {
         self.agencyTextView.attributedText = launchModelController.agencyViewModel.text
         self.locationTextView.attributedText = launchModelController.locationViewModel.text
         self.rocketTextView.attributedText = launchModelController.rocketViewModel.text
+        self.locationTextView.translatesAutoresizingMaskIntoConstraints = false
+        rocketTextView.translatesAutoresizingMaskIntoConstraints = false
+        agencyTextView.translatesAutoresizingMaskIntoConstraints = false
+        self.agencyTextView.sizeToFit()
+        self.locationTextView.sizeToFit()
+        self.rocketTextView.sizeToFit()
+        self.view.setNeedsDisplay()
+        self.view.setNeedsLayout()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
