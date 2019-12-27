@@ -11,4 +11,13 @@ import Foundation
 @objc enum LaunchNetworkingError : Int, Error {
     case missingData
     case networkingError
+    
+    var localizedDescription: String {
+        switch self {
+        case .missingData:
+            return "Missing data in response body."
+        case .networkingError:
+            return "Networking error."
+        }
+    }
 }

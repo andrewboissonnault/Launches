@@ -11,4 +11,14 @@ import Foundation
 enum LaunchError : Error {
     case missingData
     case decodingError
-}
+    
+    var localizedDescription: String {
+        switch self {
+            case .missingData:
+                return "Missing data in response body."
+            case .decodingError:
+                return "Error decoding response into models objects."
+            }
+        }
+    }
+

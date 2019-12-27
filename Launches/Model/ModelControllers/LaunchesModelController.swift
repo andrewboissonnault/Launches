@@ -26,9 +26,10 @@ class LaunchesModelController {
         self.api = api
     }
     
-    func refresh() {
+    func refresh(_ completion: @escaping (_ result: [Launch]?, _ error: Error?)->()) {
         self.api.fetchLaunches { (response, error) in
             self.launches = response?.launches
+            completion(self.launches, error)
         }
     }
 }

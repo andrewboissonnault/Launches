@@ -17,9 +17,9 @@ class LaunchDetailsViewController: UIViewController {
     @IBOutlet weak var rocketshipIcon: UIImageView!
     @IBOutlet weak var missionCount: UILabel!
     @IBOutlet weak var missionsContainer : UIView!
-    @IBOutlet weak var agencyTextView: UIView!
+    @IBOutlet weak var agencyTextView: UITextView!
     @IBOutlet weak var locationTextView: NewLineTextView!
-    @IBOutlet weak var rocketTextView: UIView!
+    @IBOutlet weak var rocketTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

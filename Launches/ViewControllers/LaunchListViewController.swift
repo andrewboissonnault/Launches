@@ -37,7 +37,12 @@ class LaunchListViewController: UITableViewController {
     }
     
     @objc private func refreshLaunches() {
-        modelController.refresh()
+        modelController.refresh { (response, error) in
+            if let safeError = error {
+                self.handleError(safeError)
+            }
+            self.refreshControl?.endRefreshing()
+        }
     }
     
     private func showLaunchDetails(_ launch : Launch) {
@@ -83,6 +88,16 @@ extension LaunchListViewController : ModelControllerObserver {
             self.tableView.isHidden = false
             self.tableView.reloadData()
             self.refreshControl?.endRefreshing()
+        }
+    }
+}
+
+extension UIViewController {
+    func handleError(_ error : Error) {
+        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        DispatchQueue.main.async {
+             self.present(alert, animated: true, completion: nil)
         }
     }
 }
